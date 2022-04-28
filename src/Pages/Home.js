@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Container, CardGroup, Card, Button } from 'react-bootstrap'
-import CarouselBox from '../Components/CarouselBox'
+import MapWrapper from '../Components/Map'
 
 export default class Home extends Component {
   render() {
     return (
       <>
-      <CarouselBox />
+      <MapWrapper />
       <Container>
         <h2 className='text-center m-4'>Our team</h2>
         <CardGroup className='m-4'>
