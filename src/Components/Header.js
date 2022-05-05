@@ -16,6 +16,9 @@ import Home from '../Pages/Home'
 import About from '../Pages/About'
 import Contacts from '../Pages/Contacts'
 import Blog from '../Pages/Blog'
+import Login from '../Pages/Login'
+import Registration from '../Pages/Registration'
+
 
 
 export default class Header extends Component {
@@ -40,14 +43,17 @@ export default class Header extends Component {
                                 <Nav.Link href='/about'> About Us </Nav.Link>
                                 <Nav.Link href='/contacts'> Contacts </Nav.Link>
                                 <Nav.Link href='/blog'> Blog </Nav.Link>
+                                <Nav.Link href='/login'> Login </Nav.Link>
+                                <Nav.Link href='/registration'> Registration </Nav.Link>
                             </Nav> 
                         </Navbar.Collapse>
-                        <Form inline>
+                        <Form >
                                 <FormControl
+                    
                                     type='text'
                                     placeholder='Search'
                                     className='mr-sm-2'
-
+                                
                                 />
                             </Form>
                         <Button variant='outline-info'>Search</Button>
@@ -60,6 +66,8 @@ export default class Header extends Component {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/contacts" component={Contacts} />
                         <Route exact path="/blog" component={Blog} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/registration" component={Registration} />
                     </Switch>
                 </Router>
             </>
