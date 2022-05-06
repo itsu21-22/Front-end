@@ -31,7 +31,7 @@ export default function App() {
         {errors.password && <p>{errors.password.message}</p>}
 
         <input type="submit" value="Увійти"/>
-        <h4>Forgot Password <a href ='/contacts'>Click here</a></h4>
+        <h4>Forgot Password? <a href ='/contacts'>Click here</a></h4>
     </form>
   );
 }

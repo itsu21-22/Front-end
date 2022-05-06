@@ -10,7 +10,7 @@ export default class Blog extends Component {
       <Container>
         <Row>
           <Col md='9'>
-          <Card className='m-5'>
+          <Card className='m-5' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
             <img 
             width={150}
             height={150}
@@ -27,7 +27,7 @@ export default class Blog extends Component {
               
             </Card.Body>
           </Card>
-          <Card className='m-5'>
+          <Card className='m-5'style={{ backgroundColor:'rgb(158, 158, 229)'}}>
             <img 
             width={150}
             height={150}
@@ -41,7 +41,7 @@ export default class Blog extends Component {
               <Button variant="success"><a href='/Дані.pdf' download>Скачати</a></Button>
             </Card.Body>
           </Card>
-          <Card className='m-5'>
+          <Card className='m-5' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
             <img 
             width={150}
             height={150}
@@ -57,17 +57,17 @@ export default class Blog extends Component {
           </Card>
           </Col>
           <Col md='3'>
-            <h5 className='text-center mt-5'>Filter</h5>
-            <Card>
-              <ListGroup variant='flush'>
-                <ListGroup.Item>filter param1</ListGroup.Item>
-                <ListGroup.Item>filter param2</ListGroup.Item>
-                <ListGroup.Item>filter param3</ListGroup.Item>
-                <ListGroup.Item>filter param4</ListGroup.Item>
-                <ListGroup.Item>filter param5</ListGroup.Item>
+            <h5 className='text-center mt-5' >Filter</h5>
+            <Card >
+              <ListGroup variant='flush' >
+                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param1</ListGroup.Item>
+                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param2</ListGroup.Item>
+                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param3</ListGroup.Item>
+                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param4</ListGroup.Item>
+                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param5</ListGroup.Item>
               </ListGroup>
             </Card>
-            <Card className='mt-3'>
+            <Card className='mt-3' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
               <Card.Body>
                 <Card.Title> Widget </Card.Title>
                 <Card.Text>
