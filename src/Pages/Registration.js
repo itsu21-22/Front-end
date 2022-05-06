@@ -38,7 +38,7 @@ export default function App() {
             <Form.Check type='checkbox' label=' I have read and accept the Privacy Policy'/>
           
         <input type="submit" value="Register"/>
-        <h4>Already have an account<a href ={'/login'}> Click here</a></h4>       
+        <h4>Already have an account? <a href ={'/login'}>Click here</a></h4>       
     </form>
   );
 }
