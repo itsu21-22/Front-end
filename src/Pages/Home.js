@@ -123,10 +123,6 @@ export default class Home extends Component {
         </ReactModal>
               <Button onClick={this.handleOpenModal} variant='primary' className='mb-2'>Більше інформації..</Button>
 
-              
-              
-
-
             </Card.Body>
           </Card>
           <Card bg='dark' text='white'>
