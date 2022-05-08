@@ -109,6 +109,7 @@ export default class Home extends Component {
             <Card.Body className='text-center'>
               <Card.Title >Сітайло Олександр Тарасович</Card.Title>
               <h6>Project Manager</h6>
+
         <ReactModal 
            isOpen={this.state.showModal}
           
@@ -121,6 +122,11 @@ export default class Home extends Component {
           <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal}></button>
         </ReactModal>
               <Button onClick={this.handleOpenModal} variant='primary' className='mb-2'>Більше інформації..</Button>
+
+              
+              
+
+
             </Card.Body>
           </Card>
           <Card bg='dark' text='white'>
@@ -131,6 +137,7 @@ export default class Home extends Component {
             <Card.Body className='text-center'>
               <Card.Title >Галамушка Тарас Васильович</Card.Title>
                 <h6>Back-end Developer, Business Analysis</h6>
+
                 
         <ReactModal 
            isOpen={this.state.showModal2}
@@ -144,6 +151,7 @@ export default class Home extends Component {
           
         </ReactModal>
               <Button onClick={this.handleOpenModal2} variant='primary' className='mb-2'>Більше інформації..</Button>
+
             </Card.Body>
           </Card>
           <Card bg='dark' text='white' >
@@ -154,6 +162,7 @@ export default class Home extends Component {
             <Card.Body className='text-center'>
               <Card.Title >Карпецький Руслан Сергійович</Card.Title>
                 <h6>Front-end Developer</h6>
+
                 <ReactModal 
            isOpen={this.state.showModal3}
           
@@ -166,6 +175,8 @@ export default class Home extends Component {
           <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal3}></button>
         </ReactModal>
               <Button onClick={this.handleOpenModal3} variant='primary' className='mb-2' >Більше інформації..</Button>
+
+
             </Card.Body>
           </Card>
           <Card bg='dark' text='white'>
@@ -176,6 +187,7 @@ export default class Home extends Component {
             <Card.Body className='text-center'>
               <Card.Title >Малішевський Олег Романович</Card.Title>
                 <h6>Front-end, Full-stack Developer</h6>
+
                 <ReactModal 
            isOpen={this.state.showModal4}
           
@@ -199,6 +211,7 @@ export default class Home extends Component {
             <Card.Body className='text-center'>
               <Card.Title >Брода Владислав Юрійович</Card.Title>
                 <h6>Front-end Developer, TeamLead</h6>
+
                 <ReactModal 
            isOpen={this.state.showModal5}
           
@@ -211,6 +224,7 @@ export default class Home extends Component {
           <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal5}></button>
         </ReactModal>
               <Button onClick={this.handleOpenModal5} variant='primary' className='mb-2' >Більше інформації..</Button>
+
             </Card.Body>
           </Card>
           <Card bg='dark' text='white'>
@@ -221,6 +235,7 @@ export default class Home extends Component {
             <Card.Body className='text-center'>
               <Card.Title>Славич Олексій Олегович</Card.Title>
               <h6>Back-end Developer, DevOps</h6>
+
               <ReactModal 
            isOpen={this.state.showModal6}
           

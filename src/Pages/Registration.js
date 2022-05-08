@@ -55,6 +55,7 @@ export default function App() {
         <button class="modal_butt" onClick={openModal}>Privacy Policy</button>
 
         <input type="submit" value="Register"/>
+
         <h4>Already have an account? <a href ={'/login'}>Click here</a></h4>
         
         
@@ -96,7 +97,8 @@ export default function App() {
 
         
       </Modal>
-    </form>    
+    </form>
+
   );
 }
 
