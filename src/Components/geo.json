@@ -4,6 +4,7 @@
       {
         "type": "Feature",
         "properties": {
+          "id": 1,
           "marker-color": "#7e7e7e",
           "marker-size": "medium",
           "Name": "Afeline Lake",

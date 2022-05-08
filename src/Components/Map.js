@@ -22,6 +22,7 @@ const center = [49.850000000000,
 
 
 function onEachFeature(feature, layer) {
+
     const N = feature.properties.Name
     const P = feature.properties.Place
     const A = feature.properties.Acres
@@ -31,15 +32,16 @@ function onEachFeature(feature, layer) {
     const W = feature.properties.Winds
     layer.bindPopup(`
     
-    <div>
-      <div style="color: #228AB5;font-size:18px;margin-bottom:-16px;"> ${N}</div></br>
-      <h4 style="margin-bottom:-16px;font-size:16px;">${P}</h4></br>
-      <h4 style="margin-bottom:-1px;font-size:16px;">${A}</div></h4>
-      <h4 style="margin-bottom:-1px;font-size:16px;">${D}</div></h4>
-      <h2 style="margin-bottom:-1px;">${T}</div></h2>
-      <h4 style="margin-bottom:-1px;font-size:16px;">${We}</div></h4>
-      <h4 style="font-size:16px;margin-bottom:10px;">${W}</div></h4>
-      <button style="background-color:#34495E;color:white;padding-left:55px;padding-right:55px;" >More Info</button>  
+    <div style="display: flex;justify-content: left;flex-direction: column;" >
+      <h2 style="color: #228AB5;font-size:18px;margin-bottom:-4px;margin-bottom:6px;"> ${N}</h2>
+      <h2 style="margin-bottom:2px;font-size:16px;color:black;">${P}</h2>
+      <h2 style="margin-bottom:-1px;font-size:16px;color:black;">${A}</h2>
+      <h2 style="margin-bottom:1px;margin-top:2px;color:black;font-size:16px;">${D}</div></h2>
+      <h2 style="margin-bottom:-1px;color:black;">${T}</div></h2>
+      <h2 style="margin-bottom:-1px;font-size:16px;color:black;">${We}</div></h2>
+      <h2 style="font-size:16px;margin-bottom:10px;color:black;">${W}</div></h2>
+      <button style="background-color:#34495E;color:white;padding-left:55px;padding-right:55px;" >More Info</button> 
+      
     <div>
     `)
   

@@ -41,6 +41,7 @@ export default class Header extends Component {
                                 <Nav.Link href='/about'> Основна інформація </Nav.Link>
                                 <Nav.Link href='/contacts'> Зворотній зв'язок </Nav.Link>
                                 <Nav.Link href='/blog'> Архів показників </Nav.Link>
+                                
                             </Nav> 
                         </Navbar.Collapse>
                         <Button variant='outline-info' href='/login'> Увійти </Button>
