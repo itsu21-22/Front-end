@@ -33,12 +33,12 @@ function onEachFeature(feature, layer) {
     
     <div>
       <div style="color: #228AB5;font-size:18px;margin-bottom:-16px;"> ${N}</div></br>
-      <h4 style="margin-bottom:-16px;font-size:16px;">${P}</h4></br>
-      <h4 style="margin-bottom:-1px;font-size:16px;">${A}</div></h4>
-      <h4 style="margin-bottom:-1px;font-size:16px;">${D}</div></h4>
+      <h2 style="margin-bottom:-16px;font-size:16px;color:black;">${P}</h2></br>
+      <h2 style="margin-bottom:-1px;font-size:16px;color:black;">${A}</div></h2>
+      <h2 style="margin-bottom:-1px;font-size:16px;color:black;">${D}</div></h2>
       <h2 style="margin-bottom:-1px;">${T}</div></h2>
-      <h4 style="margin-bottom:-1px;font-size:16px;">${We}</div></h4>
-      <h4 style="font-size:16px;margin-bottom:10px;">${W}</div></h4>
+      <h2 style="margin-bottom:-1px;font-size:16px;color:black;">${We}</div></h2>
+      <h2 style="font-size:16px;margin-bottom:10px;color:black;">${W}</div></h2>
       <button style="background-color:#34495E;color:white;padding-left:55px;padding-right:55px;" >More Info</button>  
     <div>
     `)
