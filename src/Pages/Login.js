@@ -26,14 +26,16 @@ export default function App() {
  
         <h1>Log In</h1>
         <input type="text" name="email" placeholder="Email"{...register("email")} />
-        {errors.email && <p>{errors.email.message}</p>}
+        {errors.email && <p class="textlogin">{errors.email.message}</p>}
         <input type="password" name="password" placeholder="Password" {...register("password")} />
-        {errors.password && <p>{errors.password.message}</p>}
+        {errors.password && <p class="textlogin">{errors.password.message}</p>}
 
         <input type="submit" value="Увійти"/>
-        <h4>Forgot Password <a href ='/contacts'>Click here</a></h4>
+        <h4>Forgot Password? <a href ='/contacts'>Click here</a></h4>
     </form>
   );
 }
 
 
+
+  

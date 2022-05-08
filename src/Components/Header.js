@@ -4,8 +4,6 @@ import {
     Navbar,
     Container,
     Nav,
-    Form,
-    FormControl,
     Button
 } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -18,6 +16,7 @@ import Contacts from '../Pages/Contacts'
 import Blog from '../Pages/Blog'
 import Login from '../Pages/Login'
 import Registration from '../Pages/Registration'
+
 
 
 
@@ -39,24 +38,14 @@ export default class Header extends Component {
                         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                         <Navbar.Collapse id='responsive-navbar-nav'>
                             <Nav className='mr-auto'>
-                                <Nav.Link href='/'> Home </Nav.Link>
-                                <Nav.Link href='/about'> About Us </Nav.Link>
-                                <Nav.Link href='/contacts'> Contacts </Nav.Link>
-                                <Nav.Link href='/blog'> Blog </Nav.Link>
-                                <Nav.Link href='/login'> Login </Nav.Link>
-                                <Nav.Link href='/registration'> Registration </Nav.Link>
+                                <Nav.Link href='/'> Головна </Nav.Link>
+                                <Nav.Link href='/about'> Основна інформація </Nav.Link>
+                                <Nav.Link href='/contacts'> Зворотній зв'язок </Nav.Link>
+                                <Nav.Link href='/blog'> Архів показників </Nav.Link>
                             </Nav> 
                         </Navbar.Collapse>
-                        <Form >
-                                <FormControl
-                    
-                                    type='text'
-                                    placeholder='Search'
-                                    className='mr-sm-2'
-                                
-                                />
-                            </Form>
-                        <Button variant='outline-info'>Search</Button>
+                        <Button variant='outline-info' href='/login'> Увійти </Button>
+                        <Button variant='outline-info' href='/registration'> Зареєструватись </Button>
                     </Container>
                 </Navbar>
 

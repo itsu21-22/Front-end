@@ -1,7 +1,7 @@
 body {
     background-color:rgb(148, 148, 209);
-  
-  }
+    
+}
   
   form {
     position: relative;
@@ -73,11 +73,11 @@ body {
   
   
   
-  p {
+  .textlogin {
     color: #6CB8EF;
   }
   
-  p::before {
+  .textlogin::before {
     display: inline;
     content: "⚠ ";
   }
@@ -92,7 +92,88 @@ body {
   
   
   a {
+    text-decoration: none;
     color: #6CB8EF;
   }
+
+  .Modal {
+    position: absolute;
+    height: 40%;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background-color: rgb(148, 148, 209);
+  }
   
+  .modal_reg {
+    background: rgb(148, 148, 209);;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    font-weight: 550;
+    letter-spacing: 4px;
+  }
   
+  .Modal_1 {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    top: 1000px;
+    left: 40px;
+    background-color: #6CB8EF;
+    border:solid 3px black;
+    color: white;
+    padding-left: 5%;
+    align-items: center;
+  }
+
+  .button_modal {
+    background: #6CB8EF;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 60px;
+    margin-left: 180px;
+    font-weight: 550;
+    font-size: 12px;
+    letter-spacing: 2px;
+    height: 10px;
+  }
+
+  .btn-close {
+    float: right;
+  }
+
+
+
+.modal_butt {
+
+    left: 40px;
+    background-color: rgb(148, 148, 209);
+    color: white;
+   border:none;
+   
+  }
+
+  h3{
+    color: white;
+    text-decoration: double;
+  }
+
+  h3:hover {
+    color:  darkblue;
+  }
+
+  .button_blog {
+    text-decoration: dashed;
+  }
+
+  .wew{
+    color: black;
+  }
+
+  h6{
+    color: white;
+    text-decoration: double;
+  }
