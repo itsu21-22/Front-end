@@ -4,7 +4,7 @@ import { Container, Form, Button } from 'react-bootstrap'
 export default class Contacts extends Component {
   render() {
     return (
-      <Container style={{ width: '500px' }} >
+      <Container style={{ width: '500px', height: '437px' }} >
         <h1 className='text-center mt-3'>Contact Us</h1>
         <Form>
           
