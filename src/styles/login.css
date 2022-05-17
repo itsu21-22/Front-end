@@ -1,9 +1,9 @@
 body {
-    background-color:rgb(148, 148, 209);
+    background-color:rgba(27, 27, 179, 0.4);
     
 }
   
-  form {
+  #form {
     position: relative;
     top: 250px;
     max-width: 500px;
