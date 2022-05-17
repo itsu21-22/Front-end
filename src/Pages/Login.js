@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form id="form" onSubmit={handleSubmit(onSubmit)}>
  
         <h1>Log In</h1>
         <input type="text" name="email" placeholder="Email"{...register("email")} />

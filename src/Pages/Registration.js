@@ -40,7 +40,7 @@ export default function App() {
 
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form id="form" onSubmit={handleSubmit(onSubmit)}>
  
         <h1>Registration</h1>
         

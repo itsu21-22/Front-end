@@ -7,7 +7,7 @@ import {
     Button
 } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
+import Detail from '../Pages/detail';
 import logo from './logo192.png'
 
 import Home from '../Pages/Home'
@@ -51,7 +51,9 @@ export default class Header extends Component {
 
                 <Router>
                     <Switch>
+                        
                         <Route exact path="/" component={Home} />
+                        <Route exact path='/item/:id' component={Detail} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/contacts" component={Contacts} />
                         <Route exact path="/blog" component={Blog} />
