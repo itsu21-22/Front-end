@@ -1,4 +1,27 @@
 
+
+    @media (max-width:700px){
+        .changeble_size{
+            height: 700px;
+        }
+
+    }
+    @media (max-width:1100px){
+        .Sp_wrapper{
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+    .Sp_wrapper{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 .header_wrapper{
     align-items: center;
     display: flex;
@@ -55,6 +78,7 @@
     background-color: white;
     margin-top: 80px;
     margin-bottom: 80px;
+    padding: 50px;
 }
 .dash{
     text-align: center;
@@ -66,7 +90,9 @@
     height: 400px;
     background-color: #000;
 }
+
 .Speedometer{
+   
     color: #000;
     font-weight: bold;
     margin-left: 60px;
@@ -78,11 +104,7 @@
     height: 250px;
     border-radius: 20px;
 }
-.Sp_wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 
 
@@ -131,4 +153,97 @@ ul.inline,
 li.selected {
   border-bottom: 2px solid #337ab7;
   color: #444;
+}
+.weather_items{
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    
+}
+.weather_img{
+    height: 130px;
+    width: 130px;
+    margin-top: -15px;
+    
+}
+.wether_tf{
+    
+    font-size: 90px;
+    font-weight: 300;
+}
+.wether_tc{
+   
+    font-size: 40px;
+    font-weight: 300;
+}
+.weather_stat{
+    color: grey;
+    margin-left: 20px;
+    margin-bottom: -35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    font-weight: 300;
+    font-size: 18px;
+    
+}
+.all_stats_wrapper{
+  
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    justify-content: start;
+    align-items: center;
+   
+    
+}
+.weater_locations{
+    width: 100%;
+    margin-top: -20px;
+    float: left;
+    color: grey;
+    font-weight: 300;
+    font-size: 18px;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: flex-end
+   ;
+   
+}
+.red {
+    float: left;
+    height: 250px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.green{
+   
+    float: left;
+    height: 250px;
+    width: 190px;
+   
+    display: flex;
+    justify-content: center;
+    
+}
+.black{
+    
+  width: 100%;
+    float: left;
+    height: 270px;
+    width: 400px;
+    
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;
+
 }

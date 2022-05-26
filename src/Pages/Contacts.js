@@ -4,10 +4,10 @@ import { Container, Form, Button } from 'react-bootstrap'
 export default class Contacts extends Component {
   render() {
     return (
+      <div class="form_wrapper">
       <Container style={{ width: '500px', height: '437px' }} >
         <h1 className='text-center mt-3'>Contact Us</h1>
         <Form>
-          
           <Form.Group controlId='formBasicEmail'>
             <Form.Label>Email addres</Form.Label>
             <Form.Control type='email' placeholder='Enter your email'/>
@@ -26,6 +26,7 @@ export default class Contacts extends Component {
 
         </Form>
       </Container>
+      </div>
     )
   }
 }

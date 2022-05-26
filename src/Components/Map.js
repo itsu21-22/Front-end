@@ -4,9 +4,16 @@ import { Nav } from 'react-bootstrap';
 import 'leaflet/dist/leaflet.css';
 import './map.css';
 import icon from "./icon";
+import { Link } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet';
 const MapWrapper = () => {
   const [items, setItems] = useState([]);
+  function refreshPage() {
+    setTimeout(()=>{
+        window.location.reload(false);
+    }, 500);
+    console.log('page to reload')
+}
 useEffect(() => {
     fetchItems();
   }, []);
@@ -20,7 +27,11 @@ const fetchItems = () => {
       })  
   };
   
- 
+  const data1 = {
+    from: "Link #1",
+    message: "Welcome to KindaCode.com",
+    timestamp: Date.now(),
+  };
   
 return (
     <MapContainer
@@ -56,7 +67,11 @@ return (
             <p class="water_items">{item.name}<br/> {item.company.name} <br/> 
             {item.address.street}<br/> {item.address.suite} <br/> {item.phone}</p>
             
-            <button class="water_button"><Nav.Link class="button_text" href={`/item/${item.id}`}> <div class="button_text">More Info</div> </Nav.Link></button>
+            <button class="water_button">
+              <Link class="button_text" to={`/item/${item.id}`} state={{
+    id : `${item.id}`,
+    from: `${item.username}`
+  }} onClick={refreshPage} ><p class="button_text">More Info</p> </Link></button>
             
           </div>
           </Popup>

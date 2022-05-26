@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import './pages.css'
 import Tabs from '../Components/Tabs'
 import Panel from "../Components/Panel";
 import MapWrapper from "../Components/Map";
 import ReactSpeedometer from "react-d3-speedometer";
-
+import { useLocation, Link } from "react-router-dom";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -82,22 +81,42 @@ export const data1 = {
 
 
 
-const Detail = ({ match }) => {
-  
+const Detail = ({ props }) => {
+  const location = useLocation();
+  const state = location.state;
+  console.log(state);
+ 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
-
+  
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${match.params.id}/`, {})
+    fetch(`https://jsonplaceholder.typicode.com/users/${state.id}/`, {})
       .then((res) => res.json())
       .then((response) => {
         setData(response);
         setIsLoading(false);
-        console.log(response)
        
       })
       .catch((error) => console.log(error));
   }, []);
+  const [tempf, setTempF] = useState("");
+  const [weather, setWeather] = useState();
+  const [isLoadingW, setIsLoadingW] = useState(true);
+  
+  
+useEffect(() => {
+  
+  fetch(`http://api.weatherapi.com/v1/current.json?key=093841b1f8d04688a3d121951222305 &q=Sambir&aqi=no`, {})
+    .then((res) => res.json())
+    .then((response) => {
+      setWeather(response);
+      setIsLoadingW(false);
+      console.log(response)
+     
+    })
+    .catch((error) => console.log(error));
+}, []);
+
   const data1 = {
     labels,
     
@@ -129,7 +148,7 @@ const Detail = ({ match }) => {
       },
     ],
   };
-
+  
   return (
     <>
 
@@ -139,7 +158,8 @@ const Detail = ({ match }) => {
 <Tabs>
       <Panel title="Information">
       {!isLoading && (
-        <>
+        
+       <>
         <div class="item_wrapper" >
        
         <div class="item_in">
@@ -151,21 +171,27 @@ const Detail = ({ match }) => {
           <p class="item_detail">Weather: {data.weather}</p>
           <p class="item_detail">Winds: {data.winds}</p>
           </div>
+
+
           <div class="Sp_wrapper">
-            
+            <div class="float_speed">
             <div class="Speedometer">
-            Latitude
+            Current Temperature
+            {!isLoadingW && (
+            <div>
           <ReactSpeedometer 
-          
         minValue={0}
         maxValue={120}
         segments={10}
         ringWidth={70}
         segmentColors={["#FAFAFA", "#0083F9"]}
-        currentValueText="${value} "
-        value={parseInt(12, 10)}
+        currentValueText="${value} °F "
+        value={parseInt(weather.current.temp_f - 10, 10)}
       />
+      </div>)}
       </div>
+      </div>
+      <div class="float_speed">
       <div class="Speedometer">
         Longtitude
       <ReactSpeedometer
@@ -177,6 +203,7 @@ const Detail = ({ match }) => {
         currentValueText="${value}"
         value={parseInt(33, 10)}
       />
+      </div>
       </div>
       <div class="Speedometer">
         Temperature
@@ -193,6 +220,7 @@ const Detail = ({ match }) => {
 </div>
 
 <div class="Sp_wrapper">
+
 <div class="Speedometer">
         Accres
       <ReactSpeedometer
@@ -234,16 +262,66 @@ const Detail = ({ match }) => {
       <Line options={options} data={data1} />
       </div>
       </Panel>
-      <Panel title="About">
-        <div class="item_wrapper"><h3>Introduction</h3>
-        <p>
-The U.S. Geological Survey's (USGS) National Water Information System (NWIS) is a comprehensive and distributed application that supports the acquisition, processing, and long-term storage of water data. Water Data for the Nation serves as the publicly available portal to a geographically seamless set of much of the water data maintained within NWIS (additional background).
+    
+      <Panel title="Weather">
+        
+        
+        {!isLoadingW && (
+          <div class='changeble_size'>
+            <h2 class="wether_tc">Current Weather</h2>
+        
+        <div class='all_stats_wrapper'>
 
-Nationally, USGS surface-water data includes more than 850,000 station years of time-series data that describe stream levels, streamflow (discharge), reservoir and lake levels, surface-water quality, and rainfall. The data are collected by automatic recorders and manual field measurements at installations across the Nation.
+            <div class='red'>
+            <div class="weather_items">
+        <img class='weather_img' src={`${weather.current.condition.icon}`}></img>
+        <p class="wether_tc"> {tempf} </p>
+        <p class="wether_tf" onClick={() => setTempF(`${weather.current.temp_f}`)}>°F</p>
+        <p class="wether_tf" >/</p>
+        <p class="wether_tf" onClick={() => setTempF(`${weather.current.temp_c}`)}>°C</p>
+        
+        </div>
+            </div>
+            <div class='green'>
+            <div class='weather_stat'>
+          <div > pressure: {weather.current.pressure_in}</div>
+          <div > precip: {weather.current.precip_mm} m/m </div>
+          <div > winds: {weather.current.wind_mph} m/h </div>
+          <div > cloud: {weather.current.cloud}% </div>
+          <div > humidity: {weather.current.humidity}% </div>
 
-Data are collected by field personnel or relayed through telephones or satellites to offices where it is stored and processed. The data relayed through the Geostationary Operational Environmental Satellite (GOES) system are processed automatically in near real time, and in many cases, current data are available online within minutes.
+        </div>
+            </div>
+            <div class='black'>
+               <div class="weater_locations">
+          <div>{weather.location.name} , {weather.location.region} , {weather.location.country}</div>
+          <div>{weather.current.condition.text}</div>
+          <div>{weather.location.localtime}</div>
+           <div>
+      {(() => {
+        if (weather.current.is_day == 1) {
+          return (
+            <div>Day</div>
+          )
+        } else if (weather.current.is_day == 0) {
+          return (
+            <div>Night</div>
+          )
+        } else {
+          return (
+            <div>Error</div>
+          )
+        }
+      })()}
+      
+    </div>      
+    
 
-Once a complete day of readings are received from a site, daily summary data are generated and made available online. USGS finalizes data at individual sites on a continuous basis as environmental conditions and hydrologic characteristics permit.</p></div>
+          </div>
+            </div>
+            </div>
+        </div>)}
+
       </Panel>
     </Tabs>
 
