@@ -27,12 +27,6 @@ const fetchItems = () => {
       })  
   };
   
-  const data1 = {
-    from: "Link #1",
-    message: "Welcome to KindaCode.com",
-    timestamp: Date.now(),
-  };
-  
 return (
     <MapContainer
       
