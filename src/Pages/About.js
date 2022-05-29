@@ -5,6 +5,7 @@ import "./pages.css"
 export default class About extends Component {
   render() {
     return (
+      <div class="about_wrapper">
       <Container>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
@@ -337,6 +338,7 @@ export default class About extends Component {
           </Row>
         </Tab.Container>
       </Container>
+      </div>
     )
   }
 }

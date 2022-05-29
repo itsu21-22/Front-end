@@ -19,21 +19,19 @@ useEffect(() => {
   }, []);
 const fetchItems = () => {
     axios
-      .get('https://jsonplaceholder.typicode.com/users')
+      .get('http://127.0.0.1:8000/api/v1/products')
       .then((res) => {
-        console.log(res.data);
         setItems(res.data);
         
       })  
   };
-  
 return (
     <MapContainer
       
       
     scrollWheelZoom={false}
-    center={[54,44]} 
-    zoom={3}
+    center={[49.80,24]} 
+    zoom={10}
     
     
   >
@@ -52,19 +50,19 @@ return (
                   <Marker
                   icon={icon}
                   key={item.id}
-                  position={[item.address.geo.lat, item.address.geo.lng]}
+                  position={[item.lon, item.lat]}
                   >
-                  <Popup > 
+                  <Popup > <div>
           <div class="water_wrapper" key={item.id}>
-            <p class="my_water">{item.username}</p>
+            <p class="my_water">{item.name}</p>
 
-            <p class="water_items">{item.name}<br/> {item.company.name} <br/> 
-            {item.address.street}<br/> {item.address.suite} <br/> {item.phone}</p>
-            
+            <p class="water_items">Place:{item.place}<br/>Square:{item.square} <br/> 
+            Depth:{item.depth} <br/> </p>
+             </div>
             <button class="water_button">
               <Link class="button_text" to={`/item/${item.id}`} state={{
-    id : `${item.id}`,
-    from: `${item.username}`
+    id : `${item.name}`,
+    from: `${item.place}`
   }} onClick={refreshPage} ><p class="button_text">More Info</p> </Link></button>
             
           </div>

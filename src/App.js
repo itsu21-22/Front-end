@@ -5,13 +5,14 @@ import Header from './Components/Header';
 import Footer from './Components/footer';
 
 import Home from './Pages/Home';
-import Detail from './Pages/detail';
+
 import About from './Pages/About';
 import Contacts from './Pages/Contacts';
 import Blog from './Pages/Blog';
 import Login from './Pages/Login';
 import Registration from './Pages/Registration';
 import { Routes, Route} from 'react-router-dom';
+import Detail from './Pages/DetailInfo';
 function App() {
   return (
     <div>

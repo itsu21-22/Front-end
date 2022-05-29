@@ -6,6 +6,12 @@
         }
 
     }
+    .item_thumbnail{
+        height: 250px;
+        width: 300px;
+        border-radius: 5px;
+        margin-right: 30px;
+    }
     @media (max-width:1100px){
         .Sp_wrapper{
             flex-direction: column;
@@ -28,6 +34,10 @@
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 30px;
+}
+.about_wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 .content{
     color: black;
@@ -64,12 +74,14 @@
     font-size: 18px;
     background-color: rgba(128, 128, 128, 0.057);
     padding: 10px;
+    margin-bottom: 5px;
 }
 .item_in{
     display: flex;
 }
 .item_wrapper{
-    padding-left: 60px;
+    display: flex;
+    padding-left: 5px;
     padding-right: 60px;
 }
 .all_wrapper{
@@ -90,6 +102,11 @@
     height: 400px;
     background-color: #000;
 }
+.description_wrapper{
+    width: 70%;
+    margin-top: 50px;
+    font-size: 24px;
+}
 
 .Speedometer{
    
@@ -97,7 +114,7 @@
     font-weight: bold;
     margin-left: 60px;
     margin-right: 60px;
-    margin-top: 30px;
+    
     font-size: 18px;
     box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.13);
     padding: 20px;
