@@ -63,7 +63,7 @@ const Detail = ({ props }) => {
   const [data, setData] = useState();
   
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/v1/products/${state.id}/`, {})
+    fetch(`https://geodataproject.herokuapp.com/api/v1/products/${state.id}/`, {})
       .then((res) => res.json())
       .then((response) => {
         setData(response);
@@ -143,10 +143,7 @@ useEffect(() => {
        <>
        
         <div class="item_wrapper" >
-          <div>
-        <img class='item_thumbnail' src={`http://127.0.0.1:8000${data.thumbnail}`}/>
-        </div>
-       <div>
+       <div class="items_detail">
         <div class="item_in">
          
           <p class="item_detail"> {data.name}</p>
@@ -202,18 +199,19 @@ useEffect(() => {
        {/* <div class="an">
       <Line options={options} data={data1} />
       </div> */}
-  <Table hover>
+      <div class="table-responsive-md">
+   <table class="table table-hover">
             <thead>
               <tr>    
-                <th> Date</th>
-                <th>Залізо
+                <th scope="col"> Date</th>
+                <th scope="col">Залізо
  загальне</th>
-                <th>Азот амонійнийта аміак</th>
-                <th> Фосфати</th>
-                <th>Завислі речовини</th>
-                <th>СПАР</th>
-                <th>XCK</th>
-                <th>БСК-5</th>
+                <th scope="col">Азот амонійнийта аміак</th>
+                <th scope="col"> Фосфати</th>
+                <th scope="col">Завислі речовини</th>
+                <th scope="col">СПАР</th>
+                <th scope="col">XCK</th>
+                <th scope="col">БСК-5</th>
               </tr>
             </thead>
             <tbody>
@@ -221,22 +219,22 @@ useEffect(() => {
                
               
                   <tr key={i.id}>
-                    <td>{i.date}</td>
-                    <td>{i.stat1}</td>
-                    <td>{i.stat2}</td>
-                    <td>{i.stat3}</td>
-                    <td>{i.stat4}</td>
-                    <td>{i.stat5}</td>
-                    <td>{i.stat6}</td>
-                    <td>{i.stat7}</td>
+                    <td scope="row">{i.date}</td>
+                    <td scope="row">{i.stat1}</td>
+                    <td scope="row">{i.stat2}</td>
+                    <td scope="row">{i.stat3}</td>
+                    <td scope="row">{i.stat4}</td>
+                    <td scope="row">{i.stat5}</td>
+                    <td scope="row">{i.stat6}</td>
+                    <td scope="row">{i.stat7}</td>
                    
                   </tr>
                    
                 
               )}
             </tbody>
-          </Table>  
-
+          </table>  
+          </div>
       </div>
       
       </Panel>
@@ -257,20 +255,18 @@ useEffect(() => {
         <p class="wether_tf" onClick={() => setTempF(`${weather.current.temp_f}`)}>°F</p>
         <p class="wether_tf" >/</p>
         <p class="wether_tf" onClick={() => setTempF(`${weather.current.temp_c}`)}>°C</p>
-        
         </div>
-            </div>
-            <div class='green'>
-            <div class='weather_stat'>
+        
+            
+           <div class='weather_stat'>
           <div > pressure: {weather.current.pressure_in}</div>
           <div > precip: {weather.current.precip_mm} m/m </div>
           <div > winds: {weather.current.wind_mph} m/h </div>
           <div > cloud: {weather.current.cloud}% </div>
           <div > humidity: {weather.current.humidity}% </div>
-
-        </div>
             </div>
-            <div class='black'>
+            </div>
+          <div class='black'>
                <div class="weater_locations">
           <div>{weather.location.name} , {weather.location.region} , {weather.location.country}</div>
           <div>{weather.current.condition.text}</div>
@@ -291,14 +287,12 @@ useEffect(() => {
           )
         }
       })()}
-      
     </div>      
-    
-
           </div>
             </div>
             </div>
-        </div>)}
+            </div>
+       )}
 
       </Panel>
     </Tabs>

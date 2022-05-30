@@ -1,33 +1,27 @@
 
 
-    @media (max-width:700px){
-        .changeble_size{
-            height: 700px;
-        }
-
-    }
-    .item_thumbnail{
-        height: 250px;
-        width: 300px;
-        border-radius: 5px;
-        margin-right: 30px;
-    }
-    @media (max-width:1100px){
-        .Sp_wrapper{
+    
+    @media (max-width:900px){
+        .item_wrapper{
             flex-direction: column;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-
+        .Sp_wrapper{
+            margin-top: 50px;
+        }
+    }
+    @media (min-width:900px){
+        
+       
     }
     .Sp_wrapper{
-
+        width: 350px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
+.items_detail{
+    width: 350px;
+}
 .header_wrapper{
     align-items: center;
     display: flex;
@@ -171,96 +165,211 @@ li.selected {
   border-bottom: 2px solid #337ab7;
   color: #444;
 }
-.weather_items{
-    width: 100%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    
-}
-.weather_img{
-    height: 130px;
-    width: 130px;
-    margin-top: -15px;
-    
-}
-.wether_tf{
-    
-    font-size: 90px;
-    font-weight: 300;
-}
-.wether_tc{
-   
-    font-size: 40px;
-    font-weight: 300;
-}
-.weather_stat{
-    color: grey;
-    margin-left: 20px;
-    margin-bottom: -35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-    font-weight: 300;
-    font-size: 18px;
-    
-}
-.all_stats_wrapper{
-  
-    height: 300px;
-    padding: 0;
-    margin: 0;
-    justify-content: start;
-    align-items: center;
-   
-    
-}
-.weater_locations{
-    width: 100%;
-    margin-top: -20px;
-    float: left;
-    color: grey;
-    font-weight: 300;
-    font-size: 18px;
-   display: flex;
-   flex-direction: column;
-   justify-content: end;
-   align-items: flex-end
-   ;
-   
-}
-.red {
-    float: left;
-    height: 250px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.green{
-   
-    float: left;
-    height: 250px;
-    width: 190px;
-   
-    display: flex;
-    justify-content: center;
-    
-}
-.black{
-    
-  width: 100%;
-    float: left;
-    height: 270px;
-    width: 400px;
-    
-    display: flex;
-    justify-content: center;
-   
-    flex-direction: column;
 
+@media (min-width:1250px){
+    .weather_items{
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+    }
+    .weather_img{
+        height: 130px;
+        width: 130px;
+        margin-top: -15px;
+        
+    }
+    .wether_tf{
+        
+        font-size: 90px;
+        font-weight: 300;
+    }
+    .wether_tc{
+       
+        font-size: 40px;
+        font-weight: 300;
+    }
+    .weather_stat{
+        color: grey;
+        margin-left: 50px;
+        margin-bottom: -35px;
+        flex-direction: column;
+        display: flex;
+       text-align: start;
+        justify-content: center;
+       width: 350px;
+        font-weight: 300;
+        font-size: 18px;
+        
+    }
+    .all_stats_wrapper{
+      display: flex;
+       
+        
+    }
+    .weater_locations{
+        width: 300px;
+        margin-top: 30px;
+        color: grey;
+        font-weight: 300;
+        font-size: 18px;
+       display: flex;
+       flex-direction: column;
+      text-align: end;
+       justify-content: center;
+    }
+    .red{
+    
+        width: 50%;
+        display: flex;
+        
+    }
+    .black{
+        width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+
+}
+
+@media (min-width:830px) and (max-width: 1250px){
+    .weather_items{
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+    }
+    .weather_img{
+        height: 130px;
+        width: 130px;
+        margin-top: -15px;
+        
+    }
+    .wether_tf{
+        
+        font-size: 90px;
+        font-weight: 300;
+    }
+    .wether_tc{
+       
+        font-size: 40px;
+        font-weight: 300;
+    }
+    .weather_stat{
+     
+        color: grey;
+        margin-left: 20px;
+        margin-bottom: -35px;
+        flex-direction: column;
+        display: flex;
+       text-align: start;
+        justify-content: center;
+       width: 350px;
+        font-weight: 300;
+        font-size: 18px;
+        
+    }
+    .all_stats_wrapper{
+      display: flex;
+       
+        
+    }
+    .weater_locations{
+        width: 300px;
+        margin-top: -60px;
+        color: grey;
+        font-weight: 300;
+        font-size: 18px;
+       display: flex;
+       flex-direction: column;
+      text-align: end;
+       justify-content: center;
+    }
+    .red{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .black{
+        width: 300px;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    
+    }
+}
+@media (min-width:0px) and (max-width: 830px){
+
+    .weather_items{
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        height: 250px;
+      
+    }
+    .weather_img{
+        height: 130px;
+        width: 130px;
+        margin-top: -15px;
+        
+    }
+    .wether_tf{
+        
+        font-size: 60px;
+        font-weight: 300;
+    }
+    .wether_tc{
+       
+        font-size: 40px;
+        font-weight: 300;
+    }
+    .weather_stat{
+        color: grey;
+        flex-direction: column;
+        display: flex;
+       text-align: start;
+        justify-content: center;
+       width: 350px;
+        font-weight: 300;
+        font-size: 18px;
+        
+    }
+    .all_stats_wrapper{
+      display: flex;
+      flex-direction: column;
+       
+        
+    }
+    .weater_locations{
+       
+        width: 300px;
+        margin-top: -60px;
+        color: grey;
+        font-weight: 300;
+        font-size: 18px;
+       display: flex;
+       flex-direction: column;
+      text-align: start;
+       justify-content: center;
+    }
+    .red{
+     
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        
+    }
+    .black{
+        width: 300px;
+    
+      height: 100px;
+    
+    }
 }
