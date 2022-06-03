@@ -21,7 +21,7 @@ export default function App() {
     console.log(data);;
   };
 
-  return (
+  return (<div class="form_wrapper">
     <form id="form" onSubmit={handleSubmit(onSubmit)}>
  
         <h1>Log In</h1>
@@ -33,6 +33,7 @@ export default function App() {
         <input type="submit" value="Увійти"/>
         <h4>Forgot Password? <a href ='/contacts'>Click here</a></h4>
     </form>
+    </div>
   );
 }
 

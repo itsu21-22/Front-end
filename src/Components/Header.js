@@ -6,16 +6,9 @@ import {
     Nav,
     Button
 } from 'react-bootstrap'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Detail from '../Pages/detail';
+
 import logo from './logo192.png'
 
-import Home from '../Pages/Home'
-import About from '../Pages/About'
-import Contacts from '../Pages/Contacts'
-import Blog from '../Pages/Blog'
-import Login from '../Pages/Login'
-import Registration from '../Pages/Registration'
 
 
 
@@ -49,18 +42,7 @@ export default class Header extends Component {
                     </Container>
                 </Navbar>
 
-                <Router>
-                    <Switch>
-                        
-                        <Route exact path="/" component={Home} />
-                        <Route exact path='/item/:id' component={Detail} />
-                        <Route exact path="/about" component={About} />
-                        <Route exact path="/contacts" component={Contacts} />
-                        <Route exact path="/blog" component={Blog} />
-                        <Route exact path="/login" component={Login} />
-                        <Route exact path="/registration" component={Registration} />
-                    </Switch>
-                </Router>
+               
             </>
         );
     }

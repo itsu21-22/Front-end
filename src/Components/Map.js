@@ -4,31 +4,34 @@ import { Nav } from 'react-bootstrap';
 import 'leaflet/dist/leaflet.css';
 import './map.css';
 import icon from "./icon";
+import { Link } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet';
 const MapWrapper = () => {
   const [items, setItems] = useState([]);
+  function refreshPage() {
+    setTimeout(()=>{
+        window.location.reload(false);
+    }, 500);
+    console.log('page to reload')
+}
 useEffect(() => {
     fetchItems();
   }, []);
 const fetchItems = () => {
     axios
-      .get('https://jsonplaceholder.typicode.com/users')
+      .get('https://geodataproject.herokuapp.com/api/v1/products/')
       .then((res) => {
-        console.log(res.data);
         setItems(res.data);
         
       })  
   };
-  
- 
-  
 return (
     <MapContainer
       
       
     scrollWheelZoom={false}
-    center={[54,44]} 
-    zoom={3}
+    center={[49.80,24]} 
+    zoom={10}
     
     
   >
@@ -47,16 +50,20 @@ return (
                   <Marker
                   icon={icon}
                   key={item.id}
-                  position={[item.address.geo.lat, item.address.geo.lng]}
+                  position={[item.lon, item.lat]}
                   >
-                  <Popup > 
+                  <Popup > <div>
           <div class="water_wrapper" key={item.id}>
-            <p class="my_water">{item.username}</p>
+            <p class="my_water">{item.name}</p>
 
-            <p class="water_items">{item.name}<br/> {item.company.name} <br/> 
-            {item.address.street}<br/> {item.address.suite} <br/> {item.phone}</p>
-            
-            <button class="water_button"><Nav.Link class="button_text" href={`/item/${item.id}`}> <div class="button_text">More Info</div> </Nav.Link></button>
+            <p class="water_items">Place:{item.place}<br/>Square:{item.square} <br/> 
+            Depth:{item.depth} <br/> </p>
+             </div>
+            <button class="water_button">
+              <Link class="button_text" to={`/item/${item.id}`} state={{
+    id : `${item.name}`,
+    from: `${item.place}`
+  }} onClick={refreshPage} ><p class="button_text">More Info</p> </Link></button>
             
           </div>
           </Popup>

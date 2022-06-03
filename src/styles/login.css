@@ -1,13 +1,16 @@
-body {
-    background-color:rgba(27, 27, 179, 0.4);
-    
+
+.form_wrapper{
+  background-color:rgba(27, 27, 179, 0.4);
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
   
   #form {
-    position: relative;
-    top: 250px;
-    max-width: 500px;
-    margin: 0 auto;
+   width: 400px;
+   margin: 0 auto;
   }
   
   h1 {

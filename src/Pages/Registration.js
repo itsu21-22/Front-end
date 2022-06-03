@@ -40,6 +40,7 @@ export default function App() {
 
   
   return (
+    <div class="form_wrapper">
     <form id="form" onSubmit={handleSubmit(onSubmit)}>
  
         <h1>Registration</h1>
@@ -98,6 +99,7 @@ export default function App() {
         
       </Modal>
     </form>
+    </div>
 
   );
 }
