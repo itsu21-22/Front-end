@@ -51,7 +51,7 @@ export default function App() {
         <input type="text" name="email" placeholder="Email"{...register("email")} />
         {errors.email && <p class="textlogin">{errors.email.message}</p>}
 
-        <Form.Check type='checkbox' label=' I have read and accept the Privacy Policy'/>
+        <Form.Check type='checkbox' label=' I have read and accept the '/>
           
         <button class="modal_butt" onClick={openModal}>Privacy Policy</button>
 

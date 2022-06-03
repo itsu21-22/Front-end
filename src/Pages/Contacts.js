@@ -6,7 +6,7 @@ export default class Contacts extends Component {
     return (
       <div class="form_wrapper">
       <Container style={{ width: '500px', height: '437px' }} >
-        <h1 className='text-center mt-3'>Contact Us</h1>
+        <h1 className='text-center mt-3' >Contact Us</h1>
         <Form>
           <Form.Group controlId='formBasicEmail'>
             <Form.Label>Email addres</Form.Label>

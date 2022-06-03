@@ -17,6 +17,7 @@ function App() {
   return (
     <div>
       <Header />
+<<<<<<< Updated upstream
       <Routes>
                         
                         <Route path="/" element={<Home/>} />
@@ -28,6 +29,9 @@ function App() {
                         <Route path="/registration" element={<Registration/>} />
                     </Routes>
     <Footer/>
+=======
+      {/* <Footer/> */}
+>>>>>>> Stashed changes
     </div>
   );
 }
