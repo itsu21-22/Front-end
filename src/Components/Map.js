@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Nav } from 'react-bootstrap';
 import 'leaflet/dist/leaflet.css';
 import './map.css';
 import icon from "./icon";
