@@ -17,19 +17,17 @@ function App() {
   return (
     <div>
       <Header />
-
-        <Routes>           
-          <Route path='/item/:id' element={<Detail/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contacts" element={<Contacts/>} />
-          <Route path="/" element={<Home/>} />
-          <Route path="/blog" element={<Blog/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/registration" element={<Registration/>} />
-        </Routes>
-      <Footer/>
-      {/* <Footer/> */}
-
+      <Routes>
+                        
+                        <Route path="/" element={<Home/>} />
+                        <Route path='/item/:id' element={<Detail/>} />
+                        <Route path="/about" element={<About/>} />
+                        <Route path="/contacts" element={<Contacts/>} />
+                        <Route path="/blog" element={<Blog/>} />
+                        <Route path="/login" element={<Login/>} />
+                        <Route path="/registration" element={<Registration/>} />
+                    </Routes>
+    <Footer/>
     </div>
   );
 }
