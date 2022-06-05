@@ -55,14 +55,14 @@ return (
           <div class="water_wrapper" key={item.id}>
             <p class="my_water">{item.name}</p>
 
-            <p class="water_items">Place:{item.place}<br/>Square:{item.square} <br/> 
-            Depth:{item.depth} <br/> </p>
+            <p class="water_items">Місце:{item.place}<br/>Площа:{item.square} <br/> 
+            Глибина:{item.depth} <br/> </p>
              </div>
             <button class="water_button">
               <Link class="button_text" to={`/item/${item.id}`} state={{
     id : `${item.name}`,
     from: `${item.place}`
-  }} onClick={refreshPage} ><p class="button_text">More Info</p> </Link></button>
+  }} onClick={refreshPage} ><p class="button_text">Детально</p> </Link></button>
             
           </div>
           </Popup>

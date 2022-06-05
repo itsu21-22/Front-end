@@ -167,6 +167,18 @@ li.selected {
 }
 
 @media (min-width:1250px){
+    .about_home{
+        display: flex;
+        
+    }
+    .home_image{
+        width: 200px;
+        height: 190px;
+        margin: 10px;
+    }
+    .home_text{
+        padding: 10px;
+    }
     .weather_items{
         width: 400px;
         display: flex;
@@ -236,6 +248,18 @@ li.selected {
 }
 
 @media (min-width:830px) and (max-width: 1250px){
+    .about_home{
+        display: flex;
+        
+    }
+    .home_image{
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+    }
+    .home_text{
+        padding: 10px;
+    }
     .weather_items{
         width: 400px;
         display: flex;
@@ -304,6 +328,20 @@ li.selected {
     }
 }
 @media (min-width:0px) and (max-width: 830px){
+    .home_image{
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+    }
+    .home_text{
+        padding: 10px;
+    }
+    .about_home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 .weater_locations{
     font-size: 12;
 }
@@ -429,4 +467,13 @@ li.selected {
         width: 290px;
         font-size: 15px;
     }
+}
+.card_body{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.h2_home{
+    margin-bottom: 20px;
 }

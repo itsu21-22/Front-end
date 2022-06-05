@@ -16,6 +16,7 @@ export default class Blog extends Component {
             height={200}
             className='mr-3'
             src='https://bipbap.ru/wp-content/uploads/2018/09/2015032212-640x400.jpg'
+            alt=''
           
             />
             <Card.Body>

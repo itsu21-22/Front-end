@@ -5,7 +5,6 @@ import Panel from "../Components/Panel";
 import MapWrapper from "../Components/Map";
 import ReactSpeedometer from "react-d3-speedometer";
 import { useLocation, Link } from "react-router-dom";
-import { Table } from "react-bootstrap";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,7 +15,6 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
 
 
 ChartJS.register(
@@ -53,7 +51,7 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
 
 
-const Detail = ({ props }) => {
+const Detail = ({}) => {
   
   const location = useLocation();
   const state = location.state;
@@ -68,8 +66,6 @@ const Detail = ({ props }) => {
       .then((response) => {
         setData(response);
         setIsLoading(false);
-        console.log(response)
-        
        
       })
       .catch((error) => console.log(error));
@@ -137,7 +133,7 @@ useEffect(() => {
 <div class="all_wrapper">
 {!isLoading && (
 <Tabs>
-      <Panel title="Information">
+      <Panel title="Загальна інформація">
       
         
        <>
@@ -147,16 +143,16 @@ useEffect(() => {
         <div class="item_in">
          
           <p class="item_detail"> {data.name}</p>
-          <p class="item_detail">Place: {data.place}</p>
+          <p class="item_detail">Місце: {data.place}</p>
           </div>
           <div class="item_in">
           
-          <p class="item_detail">Square: {data.square}</p>
-          <p class="item_detail">Depth: {data.depth}</p>
+          <p class="item_detail">Площа: {data.square}</p>
+          <p class="item_detail">Глибина: {data.depth}</p>
           </div>
           <div class="item_in">
           
-          <p class="item_detail">Type:{data.typez}</p>
+          <p class="item_detail">Тип:{data.typez}</p>
           </div>
           </div>
           
@@ -164,7 +160,7 @@ useEffect(() => {
           <div class="Sp_wrapper">
             <div class="float_speed">
             <div class="Speedometer">
-            <div class="item_detail">Current Temperature</div>
+            <div class="item_detail">Температура води</div>
             {!isLoadingW && (
             <div>
           <ReactSpeedometer 
@@ -195,8 +191,7 @@ useEffect(() => {
         
      
       </Panel>
-      <Panel title="Indicators">
-      <h1 class="dash">Water Analyse Dashboard</h1>
+      <Panel title="Показники">
      
         <div >
        {/* <div class="an">
@@ -247,7 +242,7 @@ useEffect(() => {
         
         {!isLoadingW && (
           <div class='changeble_size'>
-            <h2 class="wether_tc">Current Weather</h2>
+            <h2 class="wether_tc">Поточна погода</h2>
         
         <div class='all_stats_wrapper'>
 
@@ -262,11 +257,11 @@ useEffect(() => {
         
             
            <div class='weather_stat'>
-          <div > pressure: {weather.current.pressure_in}</div>
-          <div > precip: {weather.current.precip_mm} m/m </div>
-          <div > winds: {weather.current.wind_mph} m/h </div>
-          <div > cloud: {weather.current.cloud}% </div>
-          <div > humidity: {weather.current.humidity}% </div>
+          <div > Тиск: {weather.current.pressure_in}</div>
+          <div > Опади: {weather.current.precip_mm} m/m </div>
+          <div > Вітри: {weather.current.wind_mph} m/h </div>
+          <div > Хмарність: {weather.current.cloud}% </div>
+          <div > Вологість: {weather.current.humidity}% </div>
             </div>
             </div>
           <div class='black'>
@@ -278,11 +273,11 @@ useEffect(() => {
       {(() => {
         if (weather.current.is_day === 1) {
           return (
-            <div>Day</div>
+            <div>День</div>
           )
         } else if (weather.current.is_day === 0) {
           return (
-            <div>Night</div>
+            <div>Ніч</div>
           )
         } else {
           return (
