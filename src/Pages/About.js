@@ -5,11 +5,11 @@ import "./pages.css"
 export default class About extends Component {
   render() {
     return (
-      <div class="about_wrapper">
+      <div>
       <Container>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
-            <Col sm={3}>
+            <Col sm={3} className="col-sm-3">
               <Nav variant="pills" className="flex-column mt-2">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Стан водних ресурсів</Nav.Link>
@@ -24,7 +24,7 @@ export default class About extends Component {
                 
               </Nav>
             </Col>
-            <Col sm={9}>
+            <Col sm={9} className="col-sm-9">
               <Tab.Content className='mt-3'>
                 <Tab.Pane eventKey="first">
                 <div class="Container_about">
@@ -305,11 +305,11 @@ export default class About extends Component {
                       </div>
 
                       </div>
-                      <div class="header_wrapper" >
-                    <h2 class="header-center">Детальна інформація </h2>
+                      <div class="header_wrapper helper" >
+                    <h2 class="header-center" >Детальна інформація </h2>
                       </div>
                       <div class="content_wrapper">
-                      <ul class="li_wrapper"> 2021 р
+                      <ul class="li_wrapper">
                           <li class="li_content" ><a class="ref_cont" href='https://drive.google.com/file/d/1NnZHXR-vYSaDt7yCfswuuadw3Au5VlVj/view'>Стан довкілля у Львівській області за ІV квартал 2021 року</a></li>
                           <li class="li_content" ><a class="ref_cont" href='https://drive.google.com/file/d/1VT_xJtToUH1cPK94JMQ4p-WbSZBm7ou3/view'>Стан довкілля у Львівській області за ІІІ квартал 2021 року</a></li>
                           <li class="li_content" ><a class="ref_cont" href='https://drive.google.com/file/d/1YRaMaJfSdPHOcUGh1dDiI-3lEpsj2qgK/view?usp=sharing'>Стан довкілля у Львівській області за ІІ квартал 2021 року</a></li>

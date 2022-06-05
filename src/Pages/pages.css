@@ -26,7 +26,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 .about_wrapper{
@@ -149,15 +149,15 @@ ul.inline {
 
 ul.inline,
 li {
-  display: inline-block;
+  display: block;
   margin-left: 0;
   padding: 10px;
-  border-bottom: 2px solid #eee;
+  /* border-bottom: 2px solid #eee; */
   transition: all 0.5s;
   font-family: Lato, sans-serif;
   font-weight: 300;
-  cursor: pointer;
-  color: #aaa;
+  /* cursor: pointer;
+  color: #aaa; */
 }
 
 ul.inline,
@@ -469,11 +469,27 @@ li.selected {
     }
 }
 .card_body{
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: 10px;
     margin-right: 10px;
 }
 .h2_home{
     margin-bottom: 20px;
+}
+
+.col-sm-3{
+    padding-top: 50px;
+}
+
+.col-sm-9{
+    padding-bottom: 80px;
+}
+
+.helper{
+    padding-bottom: 0px;
+}
+
+.card-body{
+    padding: 0;
 }
