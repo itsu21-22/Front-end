@@ -1,12 +1,11 @@
 import React, { Component } from 'react' 
 import { 
     Navbar, 
-    Container, 
     Nav, 
 } from 'react-bootstrap' 
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
- 
-import logo from './logo192.png' 
+
+
+import logo from '../Assets/NewLogo.png' 
  
 import Home from '../Pages/Home' 
 import About from '../Pages/About' 
@@ -25,11 +24,11 @@ export default class Footer extends Component {
                             <img 
                                 src={logo} 
                                 height='30' 
-                                width='30'
+                                width='170'
                                 
                                 className='' 
                                 alt='AquaQuality' 
-                            /> AquaQuality 
+                            /> 
                             </div>
                         </Navbar.Brand>  
                         <Navbar.Toggle aria-controls='' /> 

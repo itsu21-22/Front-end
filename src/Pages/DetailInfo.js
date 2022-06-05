@@ -168,6 +168,7 @@ useEffect(() => {
             {!isLoadingW && (
             <div>
           <ReactSpeedometer 
+       width={250}
         minValue={0}
         maxValue={120}
         segments={5}
@@ -186,7 +187,9 @@ useEffect(() => {
          
           </div>
           <div class="description_wrapper">
+            <div class="description">
           <p>{data.descriptions}</p>
+          </div>
           </div>
         </>
         
@@ -250,7 +253,7 @@ useEffect(() => {
 
             <div class='red'>
             <div class="weather_items">
-        <img class='weather_img' src={`${weather.current.condition.icon}`}></img>
+        <img class='weather_img' src={`${weather.current.condition.icon}`} alt=""></img>
         <p class="wether_tc"> {tempf} </p>
         <p class="wether_tf" onClick={() => setTempF(`${weather.current.temp_f}`)}>°F</p>
         <p class="wether_tf" >/</p>
@@ -268,16 +271,16 @@ useEffect(() => {
             </div>
           <div class='black'>
                <div class="weater_locations">
-          <div>{weather.location.name} , {weather.location.region} , {weather.location.country}</div>
+          <div>{weather.location.name} ,{weather.location.region} ,{weather.location.country}</div>
           <div>{weather.current.condition.text}</div>
           <div>{weather.location.localtime}</div>
            <div>
       {(() => {
-        if (weather.current.is_day == 1) {
+        if (weather.current.is_day === 1) {
           return (
             <div>Day</div>
           )
-        } else if (weather.current.is_day == 0) {
+        } else if (weather.current.is_day === 0) {
           return (
             <div>Night</div>
           )

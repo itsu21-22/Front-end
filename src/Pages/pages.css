@@ -304,9 +304,11 @@ li.selected {
     }
 }
 @media (min-width:0px) and (max-width: 830px){
-
+.weater_locations{
+    font-size: 12;
+}
     .weather_items{
-        width: 350px;
+        width: 250px;
         display: flex;
         align-items: center;
         justify-content: start;
@@ -314,14 +316,14 @@ li.selected {
       
     }
     .weather_img{
-        height: 130px;
-        width: 130px;
+        height: 110px;
+        width: 110px;
         margin-top: -15px;
         
     }
     .wether_tf{
         
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 300;
     }
     .wether_tc{
@@ -330,22 +332,25 @@ li.selected {
         font-weight: 300;
     }
     .weather_stat{
+        padding: 0;
         color: grey;
         flex-direction: column;
         display: flex;
        text-align: start;
         justify-content: center;
-       width: 350px;
+       width: 200px;
         font-weight: 300;
         font-size: 18px;
         
     }
     .all_stats_wrapper{
       display: flex;
+     
       flex-direction: column;
        
         
     }
+
     .weater_locations{
        
         width: 300px;
@@ -358,8 +363,29 @@ li.selected {
       text-align: start;
        justify-content: center;
     }
+    .changeble_size{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .item_wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .all_wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
     .red{
-     
+        
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -367,9 +393,40 @@ li.selected {
         
     }
     .black{
-        width: 300px;
-    
+        width: 250px;
+
       height: 100px;
     
+    }
+    .Sp_wrapper{
+        width: 290px;
+      
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Speedometer{
+        width: 290px;
+        margin: 0;
+        
+      
+    }
+    .description_wrapper{
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .items_detail{
+        width: 290px;
+    }
+    .description{
+        width: 290px;
+        font-size: 15px;
     }
 }

@@ -19,8 +19,8 @@ export default class Blog extends Component {
           
             />
             <Card.Body>
-              <a href='/Дані.pdf'><h3>Показники води за квітень</h3></a>
-              <Button variant="success"><a href='/Дані.pdf' download><h6>Скачати</h6></a></Button>
+              <a href='/Дані.pdf'><h3>Комплексні показники води за 2021р</h3></a>
+              <Button variant="success"><a href='/Дані.pdf' download><h6>Завантажити</h6></a></Button>
             </Card.Body>
           </Card>
           <Card className='m-5'style={{ backgroundColor:'rgb(158, 158, 229)'}}>
@@ -32,8 +32,8 @@ export default class Blog extends Component {
 
             />
             <Card.Body>
-              <a href='/Дані.pdf'><h3>Показники води за травень</h3></a>
-              <Button variant="success" className='mb-2'><a href='/Дані.pdf' download><h6>Скачати</h6></a></Button>
+              <a href='/Дані.pdf'><h3>Комплексні показники води за 2020р</h3></a>
+              <Button variant="success" className='mb-2'><a href='/Дані.pdf' download><h6>Завантажити</h6></a></Button>
             </Card.Body>
           </Card>
           <Card className='m-5' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
@@ -45,9 +45,9 @@ export default class Blog extends Component {
 
             />
             <Card.Body>
-              <a href='/Дані.pdf'><h3>Показники води за червень</h3></a>
+              <a href='/Дані.pdf'><h3>Комплексні показники води за 2019р</h3></a>
               
-              <Button className='button_blog'variant="success"><a href='/Дані.pdf' download><h6>Скачати</h6></a></Button>
+              <Button className='button_blog'variant="success"><a href='/Дані.pdf' download><h6>Завантажити</h6></a></Button>
             </Card.Body>
           </Card>
           </Col>
