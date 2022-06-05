@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import ReactModal from 'react-modal';
-import { Container, CardGroup, Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import MapWrapper from '../Components/Map'
 
 
@@ -92,179 +91,34 @@ export default class Home extends Component {
     return (
       <>
       <MapWrapper />
-            <Card style={{ backgroundColor:'rgb(158, 158, 229)'}} >
+            <Card style={{ backgroundColor:'rgb(158, 158, 229)'}}  >
               <Card.Body>
-                <Card.Title className='text-center'> Widget </Card.Title>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                <h2 className='text-center'>Привіт!</h2>
+                <p> Якщо Ви це читаєте, це означає те, що Ви потрапили на проект AquaQuality,
+                розробленого командою студентів з ІТ СТЕП Університету. Сам проект - система
+                 моніторингу водних ресурсів міста Львова, у котрій ми постарались об'єднати
+                 простоту та інноваційні рішення. Метою сайту було забезпечення громадськості 
+                 платформою, за допомогою якої користувач зможе отримати швидкий доступ до 
+                 показників води, такі як вміст металів, йоду тощо.. Також користувач зможе 
+                 отримати додаткові дані, що стосуються менш поглибленого показника, наприклад,
+                 площа та глибина водойми, її температура, якщо людина не місцева, то взявши 
+                 координати у нас вона зможе запросто прокласти маршрут і дістатись туди. </p> 
+                <p> Наша мета - зробити доступ до інформації швидким, стабільним і щоб всі передані нами дані
+                були максимально точними.</p>
+                <h2>Як дізнатись показники стану водойми?</h2>
+                <p>Для цього Вам потрібно вибрати необхідне водосховище на інтерактивній карті, 
+                кожне з них позначається невеликою міткою синього відтінку. Після цього Ви отримаєте основну
+                інформацію про водойму у вигляді невиличного випливаючого вікна, цими параметрами будуть назва водойми,
+                її глибина і площа. Якщо ви бажаєте отримати більший обсяг інформації, то вам потібно натистути кнопку 
+                "More info" що знаходиться внизу випливаючого вікна. Одразу після цього Вам відкриється доступ до 
+                показників погодніх умов в місці розташування водойми, буде також опція переглянути показники в даній водоймі
+                у певний період часу, а також невеличку історію створення цього водосховища.</p>
+
+
               </Card.Body>
             </Card>
-      <Container>
-        <h2 className='text-center m-4'>Команда розробників</h2>
-        <CardGroup className='m-4'>
-          <Card bg='dark' text='white'>
-            <Card.Img 
-            variant='top'
-            src='https://render.fineartamerica.com/images/rendered/search/framed-print/images/artworkimages/medium/1/domesticated-monkey-nicklas-gustafsson.jpg?imgWI=6.5&imgHI=10&sku=CRQ13&mat1=PM918&mat2=&t=2&b=2&l=2&r=2&off=0.5&frameW=0.875'
-            />
-            <Card.Body className='text-center'>
-              <Card.Title >Сітайло Олександр Тарасович</Card.Title>
-              <h6>Project Manager</h6>
-
-        <ReactModal 
-           isOpen={this.state.showModal}
-          
-           onRequestClose={this.handleCloseModal}
-             className="Modal_1"
-           overlayClassName="Overlay"
-        >
-          <p>Сітайло Олександр Тарасович</p>
-          <h6>Project Manager</h6>
-          <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal}></button>
-        </ReactModal>
-              <Button onClick={this.handleOpenModal} variant='primary' className='mb-2'>Більше інформації..</Button>
-
-              
-              
-
-
-            </Card.Body>
-          </Card>
-          <Card bg='dark' text='white'>
-            <Card.Img 
-            variant='top'
-            src='https://render.fineartamerica.com/images/rendered/search/framed-print/images/artworkimages/medium/1/domesticated-monkey-nicklas-gustafsson.jpg?imgWI=6.5&imgHI=10&sku=CRQ13&mat1=PM918&mat2=&t=2&b=2&l=2&r=2&off=0.5&frameW=0.875'
-            />
-            <Card.Body className='text-center'>
-              <Card.Title >Галамушка Тарас Васильович</Card.Title>
-                <h6>Back-end Developer, Business Analysis</h6>
-
-                
-        <ReactModal 
-           isOpen={this.state.showModal2}
-           onRequestClose={this.handleCloseModal2}
-             className="Modal_1"
-           overlayClassName="Overlay"
-        >
-          <p>Галамушка Тарас Васильович</p>
-          <h6>Back-end Developer, Business Analysis</h6>
-          <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal2}></button>
-          
-        </ReactModal>
-              <Button onClick={this.handleOpenModal2} variant='primary' className='mb-2'>Більше інформації..</Button>
-
-            </Card.Body>
-          </Card>
-          <Card bg='dark' text='white' >
-            <Card.Img 
-            variant='top'
-            src='https://render.fineartamerica.com/images/rendered/search/framed-print/images/artworkimages/medium/1/domesticated-monkey-nicklas-gustafsson.jpg?imgWI=6.5&imgHI=10&sku=CRQ13&mat1=PM918&mat2=&t=2&b=2&l=2&r=2&off=0.5&frameW=0.875'
-            />
-            <Card.Body className='text-center'>
-              <Card.Title >Карпецький Руслан Сергійович</Card.Title>
-                <h6>Front-end Developer</h6>
-
-                <ReactModal 
-           isOpen={this.state.showModal3}
-          
-           onRequestClose={this.handleCloseModal3}
-             className="Modal_1"
-           overlayClassName="Overlay"
-        >
-          <p>Карпецький Руслан Сергійович</p>
-          <h6>Front-end Developer</h6>
-          <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal3}></button>
-        </ReactModal>
-              <Button onClick={this.handleOpenModal3} variant='primary' className='mb-2' >Більше інформації..</Button>
-
-
-            </Card.Body>
-          </Card>
-          <Card bg='dark' text='white'>
-            <Card.Img 
-            variant='top'
-            src='https://render.fineartamerica.com/images/rendered/search/framed-print/images/artworkimages/medium/1/domesticated-monkey-nicklas-gustafsson.jpg?imgWI=6.5&imgHI=10&sku=CRQ13&mat1=PM918&mat2=&t=2&b=2&l=2&r=2&off=0.5&frameW=0.875'
-            />
-            <Card.Body className='text-center'>
-              <Card.Title >Малішевський Олег Романович</Card.Title>
-                <h6>Front-end, Full-stack Developer</h6>
-
-                <ReactModal 
-           isOpen={this.state.showModal4}
-          
-           onRequestClose={this.handleCloseModal4}
-             className="Modal_1"
-           overlayClassName="Overlay"
-        >
-          <p>Малішевський Олег Романович</p>
-          <h6>Front-end, Full-stack Developer</h6>
-          <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal4}></button>
-        </ReactModal>
-              <Button onClick={this.handleOpenModal4} variant='primary' className='mb-2' >Більше інформації..</Button>
-
-            </Card.Body>
-          </Card>
-          <Card bg='dark' text='white'>
-            <Card.Img 
-            variant='top'
-            src='https://render.fineartamerica.com/images/rendered/search/framed-print/images/artworkimages/medium/1/domesticated-monkey-nicklas-gustafsson.jpg?imgWI=6.5&imgHI=10&sku=CRQ13&mat1=PM918&mat2=&t=2&b=2&l=2&r=2&off=0.5&frameW=0.875'
-            />
-            <Card.Body className='text-center'>
-              <Card.Title >Брода Владислав Юрійович</Card.Title>
-                <h6>Front-end Developer, TeamLead</h6>
-
-                <ReactModal 
-           isOpen={this.state.showModal5}
-          
-           onRequestClose={this.handleCloseModal5}
-             className="Modal_1"
-           overlayClassName="Overlay"
-        >
-          <p>Брода Владислав Юрійович</p>
-          <h6>Front-end Developer, TeamLead</h6>
-          <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal5}></button>
-        </ReactModal>
-              <Button onClick={this.handleOpenModal5} variant='primary' className='mb-2' >Більше інформації..</Button>
-
-            </Card.Body>
-          </Card>
-          <Card bg='dark' text='white'>
-            <Card.Img 
-            variant='top'
-            src='https://render.fineartamerica.com/images/rendered/search/framed-print/images/artworkimages/medium/1/domesticated-monkey-nicklas-gustafsson.jpg?imgWI=6.5&imgHI=10&sku=CRQ13&mat1=PM918&mat2=&t=2&b=2&l=2&r=2&off=0.5&frameW=0.875'
-            />
-            <Card.Body className='text-center'>
-              <Card.Title>Славич Олексій Олегович</Card.Title>
-              <h6>Back-end Developer, DevOps</h6>
-
-              <ReactModal 
-           isOpen={this.state.showModal6}
-          
-           onRequestClose={this.handleCloseModal6}
-             className="Modal_1"
-           overlayClassName="Overlay"
-        >
-          <p>Славич Олексій Олегович</p>
-          <h6>Back-end Developer, DevOps</h6>
-          <button className='btn btn-sm btn-secondary btn-close' onClick={this.handleCloseModal6}></button>
-        </ReactModal>
-              <Button onClick={this.handleOpenModal6} variant='primary' className='mb-2' >Більше інформації..</Button>
-              
-            </Card.Body>
-          </Card>
-        </CardGroup>
-      </Container>
-      <Card style={{ backgroundColor:'rgb(158, 158, 229)'}}>
-              <Card.Body>
-                <Card.Title className='text-center'> Widget </Card.Title>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </Card.Body>
-            </Card>
-            <Card style={{ backgroundColor:'rgb(148, 148, 209)'}} >
-              <Card.Body>
-                <Card.Title className='text-center'> Widget </Card.Title>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </Card.Body>
-            </Card>
+     
       </>
     
     )

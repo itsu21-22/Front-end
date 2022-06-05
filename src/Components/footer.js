@@ -1,17 +1,12 @@
 import React, { Component } from 'react' 
 import { 
     Navbar, 
-    Container, 
     Nav, 
 } from 'react-bootstrap' 
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
+
  
 import logo from './logo192.png' 
- 
-import Home from '../Pages/Home' 
-import About from '../Pages/About' 
-import Contacts from '../Pages/Contacts' 
-import Blog from '../Pages/Blog' 
+
  
 export default class Footer extends Component { 
     render() { 

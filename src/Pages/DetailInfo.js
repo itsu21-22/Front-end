@@ -81,7 +81,7 @@ const Detail = ({ props }) => {
   
 useEffect(() => {
   
-  fetch(`https://api.weatherapi.com/v1/current.json?key=093841b1f8d04688a3d121951222305 &q=${state.from}&aqi=no`, {})
+  fetch(`http://api.weatherapi.com/v1/current.json?key=093841b1f8d04688a3d121951222305 &q=${state.from}&aqi=no`, {})
     .then((res) => res.json())
     .then((response) => {
       setWeather(response);
