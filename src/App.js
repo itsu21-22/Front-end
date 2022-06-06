@@ -23,7 +23,7 @@ function App() {
                         <Route path='/item/:id' element={<Detail/>} />
                         <Route path="/about" element={<About/>} />
                         <Route path="/contacts" element={<Contacts/>} />
-                        <Route path="/blog" element={<Blog/>} />
+                        <Route path="/archive" element={<Blog/>} />
                         <Route path="/login" element={<Login/>} />
                         <Route path="/registration" element={<Registration/>} />
                     </Routes>

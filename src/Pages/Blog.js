@@ -28,7 +28,7 @@ export default class Blog extends Component {
                   Львівська область, Львів, вулиця Білогорща
                   </Card.Text>
                   <div class="flex-helper">
-                    <Button variant='outline-info'>Показання</Button>
+                    <a href=""><Button variant='outline-info'>Показання</Button></a>
                   </div>
                 </Card.Body>
               </Card>

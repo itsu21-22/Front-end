@@ -34,7 +34,7 @@ export default class Footer extends Component {
                                 </div> 
                                 <div class="footer_row">
                                 <Nav.Link href='/contacts'><p class="footer_text">Зворотній зв'язок</p>  </Nav.Link> 
-                                <Nav.Link href='/blog'><p class="footer_text">Архів показників </p> </Nav.Link> 
+                                <Nav.Link href='/archive'><p class="footer_text">Архів показників </p> </Nav.Link> 
                                 </div>
                                 <div className=""> 
        
@@ -47,7 +47,7 @@ export default class Footer extends Component {
                 </Navbar> 
                 <div  class="footer_wrapper">
                <p  class="footer_cop"> 
-          &copy; {new Date().getFullYear()} Copyright: <a style={{color:"white"}} href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+          &copy; {new Date().getFullYear()}  <a style={{color:"white"}} href="/"> AquaQuality.com </a>
           </p> 
           </div>
           </div>
