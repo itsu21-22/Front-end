@@ -32,9 +32,10 @@ export default class Header extends Component {
                         <Navbar.Collapse id='responsive-navbar-nav'>
                             <Nav className='mr-auto' >
                                 <Nav.Link href='/'> Головна </Nav.Link>
-                                <Nav.Link href='/about'> Основна інформація </Nav.Link>
-                                <Nav.Link href='/contacts'> Зворотній зв'язок </Nav.Link>
+                                <Nav.Link href='/about'> Про нас </Nav.Link>
                                 <Nav.Link href='/reserviors'> Водосховища </Nav.Link>
+                                <Nav.Link href='/contacts'> Зворотній зв'язок </Nav.Link>
+                                
                             </Nav> 
                         </Navbar.Collapse>
                         <Button variant='outline-info' href='/login'> Увійти </Button>
