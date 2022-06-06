@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ListGroup } from 'react-bootstrap'
 
-import { Container, Card, Row, Col, Button, } from 'react-bootstrap'
+import { Container, Card, Row, Col, Button, Form } from 'react-bootstrap'
  
 
 export default class Blog extends Component {
@@ -9,68 +9,91 @@ export default class Blog extends Component {
     return (
       <Container>
         <Row>
-          <Col md='9'>
-          <Card className='m-5' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
-            <img 
-            width={450}
-            height={200}
-            className='mr-3'
-            src='https://bipbap.ru/wp-content/uploads/2018/09/2015032212-640x400.jpg'
-            alt=''
-          
-            />
-            <Card.Body>
-              <a href='/Дані.pdf'><h3>Комплексні показники води за 2021р</h3></a>
-              <Button variant="success"><a href='/Дані.pdf' download><h6>Завантажити</h6></a></Button>
-            </Card.Body>
-          </Card>
-          <Card className='m-5'style={{ backgroundColor:'rgb(158, 158, 229)'}}>
-            <img 
-            width={450}
-            height={200}
-            className='mr-3'
-            src='https://bipbap.ru/wp-content/uploads/2018/09/7fa536ce4777b71075b6f223b784b3b2-640x480.jpg'
-
-            />
-            <Card.Body>
-              <a href='/Дані.pdf'><h3>Комплексні показники води за 2020р</h3></a>
-              <Button variant="success" className='mb-2'><a href='/Дані.pdf' download><h6>Завантажити</h6></a></Button>
-            </Card.Body>
-          </Card>
-          <Card className='m-5' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
-            <img 
-            width={450}
-            height={200}
-            className='mr-3'
-            src='https://bipbap.ru/wp-content/uploads/2018/09/84a60a0dabc11db70eee4d097cb6b3a2.jpg'
-
-            />
-            <Card.Body>
-              <a href='/Дані.pdf'><h3>Комплексні показники води за 2019р</h3></a>
-              
-              <Button className='button_blog'variant="success"><a href='/Дані.pdf' download><h6>Завантажити</h6></a></Button>
-            </Card.Body>
-          </Card>
-          </Col>
           <Col md='3'>
-            <h5 className='text-center mt-5' >Filter</h5>
-            <Card >
-              <ListGroup variant='flush' >
-                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param1</ListGroup.Item>
-                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param2</ListGroup.Item>
-                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param3</ListGroup.Item>
-                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param4</ListGroup.Item>
-                <ListGroup.Item style={{ backgroundColor:'rgb(158, 158, 229)'}}>filter param5</ListGroup.Item>
-              </ListGroup>
-            </Card>
-            <Card className='mt-3' style={{ backgroundColor:'rgb(158, 158, 229)'}}>
-              <Card.Body>
-                <Card.Title> Widget </Card.Title>
-                <Card.Text>
-                  Some example of text
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <h5 className='text-center mt-5' >Пошук</h5>
+            <Form>
+              <Form.Group className="mt-3" controlId="formFind">
+                <Form.Control type="text" placeholder="Введіть назву..." />
+              </Form.Group>
+            </Form>
+          </Col>
+          <Col md='9'>
+            <h5 className='text-center mt-5' >Водосховища</h5>
+            <div class="card-flex">
+              <Card style={{ width: '18rem' }} className="card-style">
+                <Card.Img variant="top" src="https://map.fishergo.com.ua/media/djcatalog2/images/item/5/pozharnoe-vodokhranilishche-lvovskoe-more-v-lvovskoj-oblasti_f.jpg" />
+                <Card.Body>
+                  <Card.Title className='text-center'>Білогорське водосховище</Card.Title>
+                  <Card.Text className='text-center'>
+                  Львівська область, Львів, вулиця Білогорща
+                  </Card.Text>
+                  <div class="flex-helper">
+                    <Button variant='outline-info'>Показання</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: '18rem' }} className="card-style">
+                <Card.Img variant="top" src="https://ua-travel.info/fotos/catalog/0/7122.jpg" />
+                <Card.Body>
+                  <Card.Title className='text-center'>Кривчицьке водосховище</Card.Title>
+                  <Card.Text className='text-center'>
+                  Львівська область, Львів, вулиця Богданівська
+                  </Card.Text>
+                  <div class="flex-helper">
+                    <Button variant='outline-info'>Показання</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: '18rem' }} className="card-style">
+                <Card.Img variant="top" src="https://ua-travel.info/fotos/catalog/0/7119.jpg" />
+                <Card.Body>
+                  <Card.Title className='text-center'>Лисиницьке водосховище</Card.Title>
+                  <Card.Text className='text-center'>
+                  Львівська область, Пустомитівський район
+                  </Card.Text>
+                  <div class="flex-helper">
+                    <Button variant='outline-info'>Показання</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: '18rem' }} className="card-style">
+                <Card.Img variant="top" src="https://ua-travel.info/fotos/catalog/0/7185.jpg" />
+                <Card.Body>
+                  <Card.Title className='text-center'>Річка Марунька</Card.Title>
+                  <Card.Text className='text-center'>
+                  Львівська область, Лісовий заказник, Великий ліс
+                  </Card.Text>
+                  <div class="flex-helper">
+                    <Button variant='outline-info'>Показання</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: '18rem' }} className="card-style">
+                <Card.Img variant="top" src="https://lh6.googleusercontent.com/-wCCu06aUip0/VRxazgsRWAI/AAAAAAAACa4/8Xcc16Rru8E/w732-h549-no/20150326_165151.jpg" />
+                <Card.Body>
+                  <Card.Title className='text-center'>Річка Зубра</Card.Title>
+                  <Card.Text className='text-center'>
+                  Львівська область, Пустомитівський район
+                  </Card.Text>
+                  <div class="flex-helper">
+                    <Button variant='outline-info'>Показання</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: '18rem' }} className="card-style">
+                <Card.Img variant="top" 
+                src="https://ua-travel.info/fotos/catalog/0/7107.jpg" />
+                <Card.Body>
+                  <Card.Title className='text-center'>Річка Потік</Card.Title>
+                  <Card.Text className='text-center'>
+                  Львівська область, с. Малі       Грибовичі
+                  </Card.Text>
+                  <div class="flex-helper">
+                    <Button variant='outline-info'>Показання</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
           </Col>
         </Row>
       </Container>

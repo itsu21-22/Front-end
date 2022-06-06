@@ -493,3 +493,18 @@ li.selected {
 .card-body{
     padding: 0;
 }
+
+.card-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-style{
+    margin: 10px;
+}
+
+.flex-helper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
