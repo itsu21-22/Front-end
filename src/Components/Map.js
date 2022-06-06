@@ -18,7 +18,7 @@ useEffect(() => {
   }, []);
 const fetchItems = () => {
     axios
-      .get('https://geodataproject.herokuapp.com/api/v1/products/')
+      .get('https://geodataproject.herokuapp.com/products/products/')
       .then((res) => {
         setItems(res.data);
         
