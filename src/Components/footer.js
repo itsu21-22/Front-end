@@ -34,7 +34,7 @@ export default class Footer extends Component {
                                 </div> 
                                 <div class="footer_row">
                                 <Nav.Link href='/contacts'><p class="footer_text">Зворотній зв'язок</p>  </Nav.Link> 
-                                <Nav.Link href='/archive'><p class="footer_text">Архів показників </p> </Nav.Link> 
+                                <Nav.Link href='/reserviors'><p class="footer_text">Водосховища</p> </Nav.Link> 
                                 </div>
                                 <div className=""> 
        

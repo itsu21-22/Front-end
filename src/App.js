@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route} from 'react-router-dom';
+
 import Header from './Components/Header';
 import Footer from './Components/footer';
-
 import Home from './Pages/Home';
-
 import About from './Pages/About';
 import Contacts from './Pages/Contacts';
-import Blog from './Pages/Blog';
+import Reserviors from './Pages/Reserviors';
 import Login from './Pages/Login';
 import Registration from './Pages/Registration';
-import { Routes, Route} from 'react-router-dom';
 import Detail from './Pages/DetailInfo';
 import ArchiveInfo from './Pages/ArchiveInfo';
 
@@ -25,7 +24,7 @@ function App() {
           <Route path='/item/:id' element={<Detail/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/contacts" element={<Contacts/>} />
-          <Route path="/archive" element={<Blog/>} />
+          <Route path="/reserviors" element={<Reserviors/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/registration" element={<Registration/>} />
           <Route path="/archive-info" element={<ArchiveInfo/>} />
